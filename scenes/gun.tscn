@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ln1gqv7aocwt"]
+
+[ext_resource type="Texture2D" uid="uid://bg2gxjsbrl84r" path="res://assets/gun.png" id="1_gucf4"]
+[ext_resource type="Script" path="res://script/gun.gd" id="2_30mkr"]
+
+[node name="gun" type="Sprite2D"]
+scale = Vector2(3.28078, 2.84622)
+texture = ExtResource("1_gucf4")
+offset = Vector2(0.304805, -14.1797)
+script = ExtResource("2_30mkr")
+
+[node name="ShootingPoint" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -29.8641)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

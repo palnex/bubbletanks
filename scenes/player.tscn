@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://vmotp78jt0mq"]
+
+[ext_resource type="Script" path="res://script/player.gd" id="1_f68l0"]
+[ext_resource type="Texture2D" uid="uid://chrky2ytkd1xp" path="res://assets/body.png" id="2_eksq3"]
+[ext_resource type="PackedScene" uid="uid://ln1gqv7aocwt" path="res://scenes/gun.tscn" id="3_5troq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ffw0"]
+radius = 56.4042
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(0.479999, 0.479999)
+script = ExtResource("1_f68l0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_eksq3")
+
+[node name="guns" type="Node2D" parent="."]
+
+[node name="gun" parent="guns" instance=ExtResource("3_5troq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8ffw0")
