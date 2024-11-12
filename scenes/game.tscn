@@ -1,29 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://buplvlnvo12bu"]
+[gd_scene load_steps=6 format=3 uid="uid://buplvlnvo12bu"]
 
 [ext_resource type="Script" path="res://script/node_2d.gd" id="1_dd187"]
 [ext_resource type="PackedScene" uid="uid://vmotp78jt0mq" path="res://scenes/player.tscn" id="2_gy0s5"]
 [ext_resource type="PackedScene" uid="uid://bqj0xuc78myqb" path="res://scenes/enemy.tscn" id="3_gk0xl"]
+[ext_resource type="Script" path="res://script/tank_types/bastion.gd" id="4_5apg7"]
+[ext_resource type="Script" path="res://script/tank_types/infantry.gd" id="5_e3d8e"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_dd187")
 
 [node name="player" parent="." instance=ExtResource("2_gy0s5")]
 position = Vector2(300, 804)
+speed = null
+accel = null
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 
 [node name="Enemies" type="Node2D" parent="."]
 unique_name_in_owner = true
 
-[node name="enemy" parent="Enemies" instance=ExtResource("3_gk0xl")]
+[node name="Bastion" parent="Enemies" instance=ExtResource("3_gk0xl")]
 position = Vector2(245, 180)
 scale = Vector2(0.56, 0.56)
-enemy_type = 1
+script = ExtResource("4_5apg7")
 
-[node name="enemy2" parent="Enemies" instance=ExtResource("3_gk0xl")]
+[node name="Infantry" parent="Enemies" instance=ExtResource("3_gk0xl")]
 position = Vector2(393, 360)
 scale = Vector2(0.56, 0.56)
-
-[node name="enemy3" parent="Enemies" instance=ExtResource("3_gk0xl")]
-position = Vector2(80.0001, 470)
-scale = Vector2(0.56, 0.56)
+script = ExtResource("5_e3d8e")
