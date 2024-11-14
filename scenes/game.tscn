@@ -11,7 +11,7 @@ script = ExtResource("1_dd187")
 
 [node name="player" parent="." instance=ExtResource("2_gy0s5")]
 unique_name_in_owner = true
-position = Vector2(300, 804)
+position = Vector2(194, 368)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 
@@ -22,14 +22,14 @@ unique_name_in_owner = true
 position = Vector2(245, 180)
 scale = Vector2(0.56, 0.56)
 script = ExtResource("4_5apg7")
-WANDER_TIME_MAX = 2
-STAND_TIME_MAX = 1
-ENGAGE_DISTANCE = 350.0
+WANDER_TIME_MAX = 1
+STAND_TIME_MAX = 0.5
+TRACK_TIME_MAX = 10
 
 [node name="Infantry" parent="Enemies" instance=ExtResource("3_gk0xl")]
 position = Vector2(393, 360)
 scale = Vector2(0.56, 0.56)
 script = ExtResource("5_e3d8e")
-WANDER_TIME_MAX = 2
-STAND_TIME_MAX = 1
-ENGAGE_DISTANCE = 350.0
+WANDER_TIME_MAX = 1
+STAND_TIME_MAX = 0.5
+TRACK_TIME_MAX = 10
