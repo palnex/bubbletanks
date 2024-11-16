@@ -1,0 +1,37 @@
+﻿Specification for the game Bubble Tanks
+
+
+1. Main idea—----------—----------
+
+
+Bubble Tanks is a single-player shooter mobile game where the player controls the tank, fighting off the hordes of enemy tanks. While doing so, the player collects upgrades from defeated enemies. In the menu, players can attach acquired upgrades to create stronger tanks with various playstyles.
+
+
+2. Gameplay loop—----------—----------
+3. Enemy Types—----------—----------
+* Bastion: 
+   * Low to medium spawn rate
+   * Has lots of health
+   * Slow speed
+   * Close-to-mid distance
+   * Slowly shoots shotgun-like pattern bullets
+* Flanker: 
+   * High spawn rate
+   * Has low health, 
+   * Fast to medium speed
+   * Tries to sneak up to avoid the range of your guns
+   * Deals frequent damage with “speak-like” close-range weapon
+* Sniper:
+   * Low spawn rate
+   * Has low health
+   * Low speed
+   * Tries to stay far away from the player but within the boundaries of the device’s viewport
+   * Shoots single burst bullet with medium to high cooldown
+
+
+4. Upgrade Mechanics—----------—----------
+5. Helpful Links—----------—----------
+
+
+* UML diagram link: https://app.diagrams.net/?libs=general;uml#Hpalnex%2Fbubbletanks%2Fenemy_behavior%2FGameOverview.drawio#%7B%22pageId%22%3A%22c4acf3e9-155e-7222-9cf6-157b1a14988f%22%7D
+* GitHub Repository: https://github.com/palnex/bubbletanks
