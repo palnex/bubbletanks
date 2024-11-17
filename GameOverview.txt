@@ -1,37 +1,109 @@
 ﻿Specification for the game Bubble Tanks
 
 
-1. Main idea—----------—----------
+—----------—----------Main idea—----------—----------
+
 
 
 Bubble Tanks is a single-player shooter mobile game where the player controls the tank, fighting off the hordes of enemy tanks. While doing so, the player collects upgrades from defeated enemies. In the menu, players can attach acquired upgrades to create stronger tanks with various playstyles.
 
 
-2. Gameplay loop—----------—----------
-3. Enemy Types—----------—----------
-* Bastion: 
-   * Low to medium spawn rate
-   * Has lots of health
-   * Slow speed
-   * Close-to-mid distance
-   * Slowly shoots shotgun-like pattern bullets
-* Flanker: 
-   * High spawn rate
-   * Has low health, 
-   * Fast to medium speed
-   * Tries to sneak up to avoid the range of your guns
-   * Deals frequent damage with “speak-like” close-range weapon
-* Sniper:
-   * Low spawn rate
-   * Has low health
-   * Low speed
-   * Tries to stay far away from the player but within the boundaries of the device’s viewport
-   * Shoots single burst bullet with medium to high cooldown
+
+—----------—----------What is a tank?—----------—----------
 
 
-4. Upgrade Mechanics—----------—----------
-5. Helpful Links—----------—----------
+
+A tank is the primary unit used by both enemies and player to create interaction between the two.
+
+Here is the list of things a tank has:
+
+* Core
+	-> A core is the "heart" of the tank, so there's no tank without a core
+	-> To destroy a tank, the core must be destroyed, meaning the core has health
+	-> All upgrades are attached around the core
+	-> A core could be upgraded in simple level system though various tasks or currency, permanently increasing attibutes such as 
+		* health of the tank
+		* the amount of upgrade slots
+
+* Upgrades
+	-> Player starts with no upgrades
+	-> Player is able to buy new upgrades in the shop using "soap" currenty
+	-> All of the available upgrades are stored in the player's inventory in the main menu permanently after acquisition
+	-> Tanks are able to be equiped upgrading slots (more on them later)
+	   * Shields (defense)
+	   * Guns (offense)
+	   * Generator (support)
+	-> In order to apply the effects of the upgrade, an upgrade has to be physically attached from the player's inventory to available tank slots
+	-> Each upgrade has their own health, if the upgrade is destroyed during the match and their benefits are faided away during the match away, but the upgrades would still be present in the inventory in their original form
+
+
+
+-----------—----------Gameplay loop—----------—----------
+
+
+1. Player chooses the tank
+	* Could be done though creating/modifying a tank and attaching/deattaching upgrades
+	* Could be done through selecting a preexisting tank created by said player
+2. Player chooses the game mode to start the game in
+3. Player destroyes as much tanks as they can while collecting soap currency in the process
+	* Player able to go back to the main menu prior to being defeated [ go to the step 5 ] 
+4. Player is eventually defeated where they have a few choices
+	* Player chooses to continue the game [ go to the step 3 ] 
+	* Player chooses to go to main menu
+5. Player uses the currency collected in the match to buy new upgrades
+6. Loop repeats [ go to the step 1 ] 
+
+
+
+—----------—----------Game Modes—----------—----------
+
+
+
+—----------—----------AI enemies—----------—----------
+
+
+
+* AI enemy types:
+	* Bastion: 
+	   * Low to medium spawn rate
+	   * Has lots of health
+	   * Slow speed
+	   * Close-to-mid distance
+	   * Slowly shoots shotgun-like pattern bullets
+	* Flanker: 
+	   * High spawn rate
+	   * Has low health, 
+	   * Fast to medium speed
+	   * Tries to sneak up to avoid the range of your guns
+	   * Deals frequent damage with “speak-like” close-range weapon
+	* Sniper:
+	   * Low spawn rate
+	   * Has low health
+	   * Low speed
+	   * Tries to stay far away from the player but within the boundaries of the device’s viewport
+	   * Shoots single burst bullet with medium to high cooldown
+
+
+
+
+—----------—----------Shop—----------—----------
+
+
+
+* There are a few types of currency
+	* Soap is the basic easlily farmable type of currency 
+		* It can buy most of the upgrades
+	* Syrup is the premium type of currency obtained either in small amounts through hard challenges or by donating into the game
+		* It can by any upgrade
+		* Allows to boost the xp for the tank core to level it up faster
+
+
+
+—----------—----------Helpful Links—----------—----------
+
+
 
 
 * UML diagram link: https://app.diagrams.net/?libs=general;uml#Hpalnex%2Fbubbletanks%2Fenemy_behavior%2FGameOverview.drawio#%7B%22pageId%22%3A%22c4acf3e9-155e-7222-9cf6-157b1a14988f%22%7D
+
 * GitHub Repository: https://github.com/palnex/bubbletanks
