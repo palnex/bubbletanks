@@ -24,6 +24,7 @@ Here is the list of things a tank has:
 	-> A core could be upgraded in simple level system though various tasks or currency, permanently increasing attibutes such as 
 		* health of the tank
 		* the amount of upgrade slots
+	-> Each core has a default gun which could only be destroyed alongside with core, so that a tank can defend themselves even if all upgrades are destroyed
 
 * Upgrades
 	-> Player starts with no upgrades
